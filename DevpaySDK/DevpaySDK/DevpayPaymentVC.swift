@@ -28,7 +28,7 @@ class BottomBorderTF: UITextField {
     }
 }
 
-public class PaymentInputUI: UITableViewController {
+public class DevpayPaymentVC: UITableViewController {
     
     public typealias OnPayAction = (PaymentDetail)->()
     
@@ -73,7 +73,7 @@ public class PaymentInputUI: UITableViewController {
     }
     
     public override func viewDidLoad() {
-        self.submitBtn.setTitle("PAY \(amount!) (\(currency!))", for: .normal)
+        self.submitBtn.setTitle("PAY", for: .normal)
         
         self.title = "Payment Details"
         navigationController?.navigationBar.barTintColor = UIColor.white
@@ -100,11 +100,11 @@ public class PaymentInputUI: UITableViewController {
 
     }
     
-    public static func vc() -> PaymentInputUI {
+    public static func instance() -> DevpayPaymentVC {
         let bundle = Bundle(for: self)
         
-        let storyboard = UIStoryboard(name: "DevPayUI", bundle: bundle)
-        let customViewController = storyboard.instantiateViewController(withIdentifier: "PaymentInputUI") as!PaymentInputUI
+        let storyboard = UIStoryboard(name: "DevpayUI", bundle: bundle)
+        let customViewController = storyboard.instantiateViewController(withIdentifier: "DevpayPaymentVC") as!DevpayPaymentVC
         return customViewController
     }
     
@@ -128,7 +128,7 @@ public class PaymentInputUI: UITableViewController {
         
         if self.expiryTf.text?.count ?? 0 < 6 {
             let alert = UIAlertController(title: "Message", message: "Please input expiry in the correct format", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Pk", style: .default, handler: nil))
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
             self.present(alert, animated: true, completion: nil)
             return
         }
@@ -146,11 +146,11 @@ public class PaymentInputUI: UITableViewController {
                                          state: self.stateTf.text!,
                                          country: self.countryTf.text!)
         
-        let pd = PaymentDetail(amount: amount,
+        let paymentDetails = PaymentDetail(amount: amount,
                                currency: currency,
-                               name: "Jnix - ios",
+                               name: self.nameTf.text!,
                                card: card,
                                billingAddress: billingAddr)
-        _onPayAction(pd)
+        _onPayAction(paymentDetails)
     }
 }

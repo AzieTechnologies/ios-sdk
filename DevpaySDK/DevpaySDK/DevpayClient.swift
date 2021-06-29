@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class DevPayClient {
+public class DevpayClient {
      
     var config:Config!
     var paymentManager:PaymentManager!

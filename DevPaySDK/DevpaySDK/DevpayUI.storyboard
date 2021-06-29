@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Payment InputUI-->
+        <!--Devpay PaymentVC-->
         <scene sceneID="Jjx-es-pTA">
             <objects>
-                <tableViewController storyboardIdentifier="PaymentInputUI" id="BHT-SH-A4Y" customClass="PaymentInputUI" customModule="DevPaySDK" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="DevpayPaymentVC" id="BHT-SH-A4Y" customClass="DevpayPaymentVC" customModule="DevpaySDK" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="2rc-yF-42I">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -49,7 +49,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="96"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Card number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rjG-xq-9P2" customClass="BottomBorderTF" customModule="DevPaySDK" customModuleProvider="target">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Card number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rjG-xq-9P2" customClass="BottomBorderTF" customModule="DevpaySDK" customModuleProvider="target">
                                                     <rect key="frame" x="12" y="36" width="390" height="44"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="44" id="rpf-OQ-LSe"/>
@@ -80,7 +80,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="MM/YYYY" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4IC-NK-qRF" customClass="BottomBorderTF" customModule="DevPaySDK" customModuleProvider="target">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="MM/YYYY" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4IC-NK-qRF" customClass="BottomBorderTF" customModule="DevpaySDK" customModuleProvider="target">
                                                     <rect key="frame" x="12" y="24" width="183" height="42"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="42" id="vpB-bT-gyi"/>
@@ -94,7 +94,7 @@
                                                     <color key="textColor" red="0.22745098039215686" green="0.23529411764705882" blue="0.23921568627450979" alpha="0.79830629462437919" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="CVV" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X7W-G8-85U" customClass="BottomBorderTF" customModule="DevPaySDK" customModuleProvider="target">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="CVV" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X7W-G8-85U" customClass="BottomBorderTF" customModule="DevpaySDK" customModuleProvider="target">
                                                     <rect key="frame" x="219" y="24" width="183" height="42"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="42" id="Xnc-vs-xE3"/>
@@ -134,7 +134,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9L0-BK-9vq" customClass="BottomBorderTF" customModule="DevPaySDK" customModuleProvider="target">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9L0-BK-9vq" customClass="BottomBorderTF" customModule="DevpaySDK" customModuleProvider="target">
                                                     <rect key="frame" x="12" y="24" width="390" height="42"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="42" id="CZq-fF-dwT"/>
@@ -164,7 +164,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Street" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yVy-Lp-Lkv" customClass="BottomBorderTF" customModule="DevPaySDK" customModuleProvider="target">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Street" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yVy-Lp-Lkv" customClass="BottomBorderTF" customModule="DevpaySDK" customModuleProvider="target">
                                                     <rect key="frame" x="12" y="24" width="390" height="42"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="42" id="oDl-80-oZ2"/>
@@ -194,7 +194,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hMD-Qw-MJR" customClass="BottomBorderTF" customModule="DevPaySDK" customModuleProvider="target">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hMD-Qw-MJR" customClass="BottomBorderTF" customModule="DevpaySDK" customModuleProvider="target">
                                                     <rect key="frame" x="12" y="24" width="187" height="42"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="42" id="zUF-dG-yyh"/>
@@ -215,7 +215,7 @@
                                                     <color key="textColor" red="0.2274509804" green="0.23529411759999999" blue="0.23921568630000001" alpha="0.79830629460000002" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Zip" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OyQ-u4-BYz" customClass="BottomBorderTF" customModule="DevPaySDK" customModuleProvider="target">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Zip" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OyQ-u4-BYz" customClass="BottomBorderTF" customModule="DevpaySDK" customModuleProvider="target">
                                                     <rect key="frame" x="223" y="24" width="179" height="42"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="179" id="mkI-BE-Cn1"/>
@@ -243,7 +243,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="State" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3FJ-vr-lnU" customClass="BottomBorderTF" customModule="DevPaySDK" customModuleProvider="target">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="State" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3FJ-vr-lnU" customClass="BottomBorderTF" customModule="DevpaySDK" customModuleProvider="target">
                                                     <rect key="frame" x="12" y="24" width="390" height="42"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="42" id="pbs-aB-5Lo"/>
@@ -273,7 +273,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Country" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wzw-wp-PTJ" customClass="BottomBorderTF" customModule="DevPaySDK" customModuleProvider="target">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Country" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wzw-wp-PTJ" customClass="BottomBorderTF" customModule="DevpaySDK" customModuleProvider="target">
                                                     <rect key="frame" x="12" y="24" width="390" height="42"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="42" id="OFb-AA-IBV"/>

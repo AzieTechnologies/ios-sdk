@@ -11,8 +11,8 @@
 		CD1A6F8D267FA1B800F98A4C /* card.png in Resources */ = {isa = PBXBuildFile; fileRef = CD1A6F8B267FA1B800F98A4C /* card.png */; };
 		CD1A6F8E267FA1B800F98A4C /* powerd_by.png in Resources */ = {isa = PBXBuildFile; fileRef = CD1A6F8C267FA1B800F98A4C /* powerd_by.png */; };
 		CDB03016267CCE1F00F06E58 /* PaysafeClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB03015267CCE1F00F06E58 /* PaysafeClient.swift */; };
-		CDB03054267D881700F06E58 /* PaymentInputUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB03053267D881700F06E58 /* PaymentInputUI.swift */; };
-		CDB03056267DA7F000F06E58 /* DevPayUI.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDB03055267DA7F000F06E58 /* DevPayUI.storyboard */; };
+		CDB03054267D881700F06E58 /* DevpayPaymentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB03053267D881700F06E58 /* DevpayPaymentVC.swift */; };
+		CDB03056267DA7F000F06E58 /* DevpayUI.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDB03055267DA7F000F06E58 /* DevpayUI.storyboard */; };
 		CDDF033C267CC9FE001275DE /* DevPaySDK.h in Headers */ = {isa = PBXBuildFile; fileRef = CDDF033A267CC9FE001275DE /* DevPaySDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CDDF0343267CCA9F001275DE /* DevPayClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDF0342267CCA9F001275DE /* DevPayClient.swift */; };
 		CDDF0345267CCB04001275DE /* PaymentDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDF0344267CCB04001275DE /* PaymentDetail.swift */; };
@@ -30,9 +30,9 @@
 		CD1A6F8B267FA1B800F98A4C /* card.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card.png; sourceTree = "<group>"; };
 		CD1A6F8C267FA1B800F98A4C /* powerd_by.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = powerd_by.png; sourceTree = "<group>"; };
 		CDB03015267CCE1F00F06E58 /* PaysafeClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaysafeClient.swift; sourceTree = "<group>"; };
-		CDB03053267D881700F06E58 /* PaymentInputUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentInputUI.swift; sourceTree = "<group>"; };
-		CDB03055267DA7F000F06E58 /* DevPayUI.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DevPayUI.storyboard; sourceTree = "<group>"; };
-		CDDF0337267CC9FE001275DE /* DevPaySDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DevPaySDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDB03053267D881700F06E58 /* DevpayPaymentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevpayPaymentVC.swift; sourceTree = "<group>"; };
+		CDB03055267DA7F000F06E58 /* DevpayUI.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DevpayUI.storyboard; sourceTree = "<group>"; };
+		CDDF0337267CC9FE001275DE /* DevpaySDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DevpaySDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDDF033A267CC9FE001275DE /* DevPaySDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DevPaySDK.h; sourceTree = "<group>"; };
 		CDDF033B267CC9FE001275DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDDF0342267CCA9F001275DE /* DevPayClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevPayClient.swift; sourceTree = "<group>"; };
@@ -69,7 +69,7 @@
 		CDDF032D267CC9FE001275DE = {
 			isa = PBXGroup;
 			children = (
-				CDDF0339267CC9FE001275DE /* DevPaySDK */,
+				CDDF0339267CC9FE001275DE /* DevpaySDK */,
 				CDDF0338267CC9FE001275DE /* Products */,
 				D2CD440F24F41CA5EFF80753 /* Pods */,
 				8FDD2AF21D98C941DC4709BD /* Frameworks */,
@@ -79,12 +79,12 @@
 		CDDF0338267CC9FE001275DE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CDDF0337267CC9FE001275DE /* DevPaySDK.framework */,
+				CDDF0337267CC9FE001275DE /* DevpaySDK.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CDDF0339267CC9FE001275DE /* DevPaySDK */ = {
+		CDDF0339267CC9FE001275DE /* DevpaySDK */ = {
 			isa = PBXGroup;
 			children = (
 				CD1A6F8B267FA1B800F98A4C /* card.png */,
@@ -100,10 +100,10 @@
 				CDDF034E267CCCC7001275DE /* PaymentIntent.swift */,
 				CDDF0350267CCD0E001275DE /* PaymentMethod.swift */,
 				CDB03015267CCE1F00F06E58 /* PaysafeClient.swift */,
-				CDB03053267D881700F06E58 /* PaymentInputUI.swift */,
-				CDB03055267DA7F000F06E58 /* DevPayUI.storyboard */,
+				CDB03053267D881700F06E58 /* DevpayPaymentVC.swift */,
+				CDB03055267DA7F000F06E58 /* DevpayUI.storyboard */,
 			);
-			path = DevPaySDK;
+			path = DevpaySDK;
 			sourceTree = "<group>";
 		};
 		D2CD440F24F41CA5EFF80753 /* Pods */ = {
@@ -129,9 +129,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		CDDF0336267CC9FE001275DE /* DevPaySDK */ = {
+		CDDF0336267CC9FE001275DE /* DevpaySDK */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CDDF033F267CC9FE001275DE /* Build configuration list for PBXNativeTarget "DevPaySDK" */;
+			buildConfigurationList = CDDF033F267CC9FE001275DE /* Build configuration list for PBXNativeTarget "DevpaySDK" */;
 			buildPhases = (
 				05BCC25904D99ADDEDBA97EE /* [CP] Check Pods Manifest.lock */,
 				CDDF0332267CC9FE001275DE /* Headers */,
@@ -143,9 +143,9 @@
 			);
 			dependencies = (
 			);
-			name = DevPaySDK;
+			name = DevpaySDK;
 			productName = DevPaySDK;
-			productReference = CDDF0337267CC9FE001275DE /* DevPaySDK.framework */;
+			productReference = CDDF0337267CC9FE001275DE /* DevpaySDK.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -163,7 +163,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CDDF0331267CC9FE001275DE /* Build configuration list for PBXProject "DevPaySDK" */;
+			buildConfigurationList = CDDF0331267CC9FE001275DE /* Build configuration list for PBXProject "DevpaySDK" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -176,7 +176,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CDDF0336267CC9FE001275DE /* DevPaySDK */,
+				CDDF0336267CC9FE001275DE /* DevpaySDK */,
 			);
 		};
 /* End PBXProject section */
@@ -186,7 +186,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDB03056267DA7F000F06E58 /* DevPayUI.storyboard in Resources */,
+				CDB03056267DA7F000F06E58 /* DevpayUI.storyboard in Resources */,
 				CD1A6F8E267FA1B800F98A4C /* powerd_by.png in Resources */,
 				CD1A6F8D267FA1B800F98A4C /* card.png in Resources */,
 			);
@@ -229,7 +229,7 @@
 				CDDF034D267CCC5D001275DE /* PaymentManager.swift in Sources */,
 				CDDF0343267CCA9F001275DE /* DevPayClient.swift in Sources */,
 				CDDF0349267CCB20001275DE /* Config.swift in Sources */,
-				CDB03054267D881700F06E58 /* PaymentInputUI.swift in Sources */,
+				CDB03054267D881700F06E58 /* DevpayPaymentVC.swift in Sources */,
 				CDDF0347267CCB0E001275DE /* Card.swift in Sources */,
 				CDDF0351267CCD0E001275DE /* PaymentMethod.swift in Sources */,
 				CDDF034B267CCB81001275DE /* RestClient.swift in Sources */,
@@ -420,7 +420,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CDDF0331267CC9FE001275DE /* Build configuration list for PBXProject "DevPaySDK" */ = {
+		CDDF0331267CC9FE001275DE /* Build configuration list for PBXProject "DevpaySDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CDDF033D267CC9FE001275DE /* Debug */,
@@ -429,7 +429,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CDDF033F267CC9FE001275DE /* Build configuration list for PBXNativeTarget "DevPaySDK" */ = {
+		CDDF033F267CC9FE001275DE /* Build configuration list for PBXNativeTarget "DevpaySDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CDDF0340267CC9FE001275DE /* Debug */,

@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CDB0302E267CFD3800F06E58"
-               BuildableName = "DevPaySDKSample.app"
-               BlueprintName = "DevPaySDKSample"
-               ReferencedContainer = "container:DevPaySDKSample.xcodeproj">
+               BlueprintIdentifier = "CDDF0336267CC9FE001275DE"
+               BuildableName = "DevpaySDK.framework"
+               BlueprintName = "DevpaySDK"
+               ReferencedContainer = "container:DevPaySDK.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -40,16 +40,6 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CDB0302E267CFD3800F06E58"
-            BuildableName = "DevPaySDKSample.app"
-            BlueprintName = "DevPaySDKSample"
-            ReferencedContainer = "container:DevPaySDKSample.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -57,16 +47,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CDB0302E267CFD3800F06E58"
-            BuildableName = "DevPaySDKSample.app"
-            BlueprintName = "DevPaySDKSample"
-            ReferencedContainer = "container:DevPaySDKSample.xcodeproj">
+            BlueprintIdentifier = "CDDF0336267CC9FE001275DE"
+            BuildableName = "DevpaySDK.framework"
+            BlueprintName = "DevpaySDK"
+            ReferencedContainer = "container:DevPaySDK.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

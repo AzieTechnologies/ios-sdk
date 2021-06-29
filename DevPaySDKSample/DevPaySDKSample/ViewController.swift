@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import DevPaySDK
+import DevpaySDK
 
 class ViewController: UIViewController {
     
@@ -25,9 +25,9 @@ class ViewController: UIViewController {
                             accessKey: "sk_AdBRPUKdcM2QbyS5VT2yQJaIPTl6etzP2mK0ojKhM0xJ8PBMwxbZqzfmrIzv8Ukzf3NtpgbIoH119Fm21dVDCV32CZr3koGwb8OP",
                             sandbox: true)
 
-        let payClient = DevPayClient(config: config)
+        let payClient = DevpayClient(config: config)
         
-        let devPayVC = PaymentInputUI.vc()
+        let devPayVC = DevpayPaymentVC.instance()
         let amountNumber = self.amountTf!.text;
         devPayVC.amount = Int(amountNumber ?? "")
         devPayVC.currency = .USD

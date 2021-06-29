@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1B05AA63195F6086BAF8F2F8 /* Pods_DevPaySDKSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B901817CB7F639C58B83FCB9 /* Pods_DevPaySDKSample.framework */; };
+		57D5E279FCA309B2A2872025 /* Pods_DevpaySDKSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC3B9F62174713ACE23E7AF /* Pods_DevpaySDKSample.framework */; };
 		CDB03033267CFD3800F06E58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB03032267CFD3800F06E58 /* AppDelegate.swift */; };
 		CDB03035267CFD3800F06E58 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB03034267CFD3800F06E58 /* SceneDelegate.swift */; };
 		CDB03037267CFD3800F06E58 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB03036267CFD3800F06E58 /* ViewController.swift */; };
@@ -18,9 +18,10 @@
 
 /* Begin PBXFileReference section */
 		141020CAA7EE37C0EE5B0352 /* Pods-DevPaySDKSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevPaySDKSample.debug.xcconfig"; path = "Target Support Files/Pods-DevPaySDKSample/Pods-DevPaySDKSample.debug.xcconfig"; sourceTree = "<group>"; };
+		4BC3B9F62174713ACE23E7AF /* Pods_DevpaySDKSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DevpaySDKSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		671D9EF83D1EE9CA6FE15F5D /* Pods-DevpaySDKSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevpaySDKSample.debug.xcconfig"; path = "Target Support Files/Pods-DevpaySDKSample/Pods-DevpaySDKSample.debug.xcconfig"; sourceTree = "<group>"; };
 		6D97695C59CE2914527C7D4B /* Pods-DevPaySDKSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevPaySDKSample.release.xcconfig"; path = "Target Support Files/Pods-DevPaySDKSample/Pods-DevPaySDKSample.release.xcconfig"; sourceTree = "<group>"; };
-		B901817CB7F639C58B83FCB9 /* Pods_DevPaySDKSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DevPaySDKSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CDB0302F267CFD3800F06E58 /* DevPaySDKSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DevPaySDKSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDB0302F267CFD3800F06E58 /* DevpaySDKSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DevpaySDKSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDB03032267CFD3800F06E58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDB03034267CFD3800F06E58 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CDB03036267CFD3800F06E58 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -28,6 +29,7 @@
 		CDB0303B267CFD3C00F06E58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CDB0303E267CFD3C00F06E58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CDB03040267CFD3C00F06E58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6A0543D88AC9B86682C4C0F /* Pods-DevpaySDKSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevpaySDKSample.release.xcconfig"; path = "Target Support Files/Pods-DevpaySDKSample/Pods-DevpaySDKSample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,7 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B05AA63195F6086BAF8F2F8 /* Pods_DevPaySDKSample.framework in Frameworks */,
+				57D5E279FCA309B2A2872025 /* Pods_DevpaySDKSample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,7 +47,7 @@
 		18CBAF86745E44B4627753C6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B901817CB7F639C58B83FCB9 /* Pods_DevPaySDKSample.framework */,
+				4BC3B9F62174713ACE23E7AF /* Pods_DevpaySDKSample.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -55,6 +57,8 @@
 			children = (
 				141020CAA7EE37C0EE5B0352 /* Pods-DevPaySDKSample.debug.xcconfig */,
 				6D97695C59CE2914527C7D4B /* Pods-DevPaySDKSample.release.xcconfig */,
+				671D9EF83D1EE9CA6FE15F5D /* Pods-DevpaySDKSample.debug.xcconfig */,
+				D6A0543D88AC9B86682C4C0F /* Pods-DevpaySDKSample.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -72,7 +76,7 @@
 		CDB03030267CFD3800F06E58 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CDB0302F267CFD3800F06E58 /* DevPaySDKSample.app */,
+				CDB0302F267CFD3800F06E58 /* DevpaySDKSample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,9 +98,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CDB0302E267CFD3800F06E58 /* DevPaySDKSample */ = {
+		CDB0302E267CFD3800F06E58 /* DevpaySDKSample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CDB03043267CFD3C00F06E58 /* Build configuration list for PBXNativeTarget "DevPaySDKSample" */;
+			buildConfigurationList = CDB03043267CFD3C00F06E58 /* Build configuration list for PBXNativeTarget "DevpaySDKSample" */;
 			buildPhases = (
 				B2CD32F658245979E35F4832 /* [CP] Check Pods Manifest.lock */,
 				CDB0302B267CFD3800F06E58 /* Sources */,
@@ -108,9 +112,9 @@
 			);
 			dependencies = (
 			);
-			name = DevPaySDKSample;
+			name = DevpaySDKSample;
 			productName = DevPaySDKSample;
-			productReference = CDB0302F267CFD3800F06E58 /* DevPaySDKSample.app */;
+			productReference = CDB0302F267CFD3800F06E58 /* DevpaySDKSample.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -127,7 +131,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CDB0302A267CFD3800F06E58 /* Build configuration list for PBXProject "DevPaySDKSample" */;
+			buildConfigurationList = CDB0302A267CFD3800F06E58 /* Build configuration list for PBXProject "DevpaySDKSample" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -140,7 +144,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CDB0302E267CFD3800F06E58 /* DevPaySDKSample */,
+				CDB0302E267CFD3800F06E58 /* DevpaySDKSample */,
 			);
 		};
 /* End PBXProject section */
@@ -174,7 +178,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DevPaySDKSample-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-DevpaySDKSample-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -187,15 +191,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DevPaySDKSample/Pods-DevPaySDKSample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-DevpaySDKSample/Pods-DevpaySDKSample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DevPaySDKSample/Pods-DevPaySDKSample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-DevpaySDKSample/Pods-DevpaySDKSample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DevPaySDKSample/Pods-DevPaySDKSample-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DevpaySDKSample/Pods-DevpaySDKSample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -351,7 +355,7 @@
 		};
 		CDB03044267CFD3C00F06E58 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 141020CAA7EE37C0EE5B0352 /* Pods-DevPaySDKSample.debug.xcconfig */;
+			baseConfigurationReference = 671D9EF83D1EE9CA6FE15F5D /* Pods-DevpaySDKSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -362,7 +366,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dev.DevPaySDK.DevPaySDKSample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dev.DevpaySDK.DevpaySDKSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -371,7 +375,7 @@
 		};
 		CDB03045267CFD3C00F06E58 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6D97695C59CE2914527C7D4B /* Pods-DevPaySDKSample.release.xcconfig */;
+			baseConfigurationReference = D6A0543D88AC9B86682C4C0F /* Pods-DevpaySDKSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -382,7 +386,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dev.DevPaySDK.DevPaySDKSample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dev.DevpaySDK.DevpaySDKSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -392,7 +396,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CDB0302A267CFD3800F06E58 /* Build configuration list for PBXProject "DevPaySDKSample" */ = {
+		CDB0302A267CFD3800F06E58 /* Build configuration list for PBXProject "DevpaySDKSample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CDB03041267CFD3C00F06E58 /* Debug */,
@@ -401,7 +405,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CDB03043267CFD3C00F06E58 /* Build configuration list for PBXNativeTarget "DevPaySDKSample" */ = {
+		CDB03043267CFD3C00F06E58 /* Build configuration list for PBXNativeTarget "DevpaySDKSample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CDB03044267CFD3C00F06E58 /* Debug */,
