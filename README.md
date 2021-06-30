@@ -3,7 +3,7 @@ A iOS SDK for Devpay Payment Gateway Get your API Keys at https://devpay.io
 
 ## Integration
 ```Ruby
- pod 'devpay-sdk'
+ pod 'DevpaySDK'
 ```
 
 ## Make payment
@@ -14,9 +14,9 @@ let config = Config(accountId: "ACC_ID",
                     accessKey: "ACCESS_KEY",
                     sandbox: true)
 
-let payClient = DevPayClient(config: config)
+let payClient = DevpayClient(config: config)
 
-let devPayVC = PaymentInputUI.vc()
+let devPayVC = DevpayPaymentVC.instance()
 let amountNumber = <AMOUNT>
 devPayVC.amount = Int(amountNumber ?? "")
 devPayVC.currency = .USD
@@ -50,7 +50,7 @@ let config = Config(accountId: "ACC_ID",
                     shareableKey: "SHAREABLE_KEY",
                     accessKey: "ACCESS_KEY",
                     sandbox: true)
-let payClient = DevPayClient(config: config)
+let payClient = DevpayClient(config: config)
 
 let card = Card(cardNum: "XXXXYYYYXXXXYYYY",
                 expiryMonth: "MM",
