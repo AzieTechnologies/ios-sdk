@@ -48,7 +48,8 @@ class PaymentManager {
         billingDetailsDict["amount"] = details.amount
         billingDetailsDict["currency"] = details.currency
         billingDetailsDict["address"] = details.billingAddress?.asDictionary()
-
+        dataDictionary["billing_details"] = billingDetailsDict;
+        
         if let jsonData = try? JSONSerialization.data(withJSONObject: dataDictionary, options: []) {
         
             restClient.post(path: "/v1/payment-methods",
