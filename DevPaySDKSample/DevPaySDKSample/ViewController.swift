@@ -46,6 +46,11 @@ class ViewController: UIViewController {
         }
         
         let navigation = UINavigationController(rootViewController: devPayVC)
+
+        devPayVC.closeAction = {
+            navigation.dismiss(animated: true, completion: nil)
+        }
+        
         self.present(navigation, animated: true, completion: nil)
     }
     

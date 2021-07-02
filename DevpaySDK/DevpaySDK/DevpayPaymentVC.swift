@@ -42,6 +42,18 @@ public class DevpayPaymentVC: UITableViewController {
         }
     }
     
+    public typealias CloseAction = ()->()
+    
+    var _closeAction:CloseAction!
+    public var closeAction:CloseAction! {
+        set {
+            _closeAction = newValue
+        }
+        get{
+            return _closeAction
+        }
+    }
+
     @IBOutlet weak var submitBtn: UIButton!
     @IBOutlet weak var cardNumTf: UITextField!
     @IBOutlet weak var expiryTf: UITextField!
@@ -72,8 +84,16 @@ public class DevpayPaymentVC: UITableViewController {
         IQKeyboardManager.shared.enable = appUsesIQKeyboardManager
     }
     
+    @objc func closeBtnAction(){
+        self.closeAction()
+    }
+    
     public override func viewDidLoad() {
         self.submitBtn.setTitle("PAY", for: .normal)
+        
+        let closeBtn = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(closeBtnAction))
+
+        self.navigationItem.rightBarButtonItem = closeBtn
         
         self.title = "Payment Details"
         navigationController?.navigationBar.barTintColor = UIColor.white
