@@ -1,0 +1,23 @@
+PODS:
+  - DevpaySDK (1.0.0):
+    - IQKeyboardManagerSwift
+  - IQKeyboardManagerSwift (6.5.6)
+
+DEPENDENCIES:
+  - DevpaySDK (from `./../`)
+
+SPEC REPOS:
+  trunk:
+    - IQKeyboardManagerSwift
+
+EXTERNAL SOURCES:
+  DevpaySDK:
+    :path: "./../"
+
+SPEC CHECKSUMS:
+  DevpaySDK: d91e26919ae15d603fadc3d0657bbd48b8f0a265
+  IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
+
+PODFILE CHECKSUM: bfe07b4a59c612172a1c6b7366cadeb92eb66eff
+
+COCOAPODS: 1.10.1

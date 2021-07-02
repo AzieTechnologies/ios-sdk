@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DevpaySDKSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="111" borderStyle="roundedRect" placeholder="Amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MGI-9a-lfn">
+                                <rect key="frame" x="136" y="427" width="142" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="142" id="2nu-H6-Bmd"/>
+                                    <constraint firstAttribute="height" constant="42" id="jg7-fQ-TDO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5KA-co-fhK">
+                                <rect key="frame" x="98" y="505" width="218" height="46"/>
+                                <color key="backgroundColor" red="0.25490196079999999" green="0.090196078430000007" blue="0.74117647060000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="8x9-xQ-M72"/>
+                                    <constraint firstAttribute="width" constant="218" id="ACM-Kf-bBR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Pay">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="payActionWithButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TKv-XX-jOh"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Devpay" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8sY-ka-5ny">
+                                <rect key="frame" x="177" y="321" width="60" height="22"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5KA-co-fhK" firstAttribute="top" secondItem="MGI-9a-lfn" secondAttribute="bottom" constant="36" id="EMQ-Vc-1zE"/>
+                            <constraint firstItem="8sY-ka-5ny" firstAttribute="centerX" secondItem="MGI-9a-lfn" secondAttribute="centerX" id="LJs-UZ-Kwz"/>
+                            <constraint firstItem="MGI-9a-lfn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YLe-Ik-Ddj"/>
+                            <constraint firstItem="5KA-co-fhK" firstAttribute="centerX" secondItem="MGI-9a-lfn" secondAttribute="centerX" id="aIU-Iu-jah"/>
+                            <constraint firstItem="MGI-9a-lfn" firstAttribute="top" secondItem="8sY-ka-5ny" secondAttribute="bottom" constant="84" id="qZY-F0-oFE"/>
+                            <constraint firstItem="MGI-9a-lfn" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="yjv-Af-ojP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="amountTf" destination="MGI-9a-lfn" id="RtW-tQ-MTO"/>
+                        <outlet property="payBtn" destination="5KA-co-fhK" id="i2n-5N-M0Q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="31.884057971014496" y="71.651785714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
