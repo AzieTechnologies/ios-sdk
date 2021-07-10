@@ -22,7 +22,7 @@ class RestClient {
     
     func post(path: String,
               data: Data,
-              headers:[String:String],
+              headers:[String:String]? = [:],
             completion: @escaping CompletionBlock) -> Void {
         
         let url = URL(string: baseURL+path);
@@ -42,7 +42,7 @@ class RestClient {
         }
 
         // Set request specific headers
-        headers.forEach { (key: String, value: String) in
+        headers?.forEach { (key: String, value: String) in
             request.setValue(value, forHTTPHeaderField: key)
         }
         

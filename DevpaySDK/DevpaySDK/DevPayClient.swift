@@ -15,7 +15,7 @@ public class DevpayClient {
     
     public init(config: Config) {
         self.config = config
-        let restClient = restClientDevPay()
+        let restClient = restClientTilled()
         paymentManager = PaymentManager(restClient: restClient)
         paymentManager.paymentIntentSecret = config.accessKey
     }
@@ -25,31 +25,40 @@ public class DevpayClient {
     public func confirmPayment(details: PaymentDetail,
                                completion: @escaping  PaymentConfirmationCompletion) -> Void {
         
-        self.paymentManager.paysafeAPIKey() { key, err in
-            
+        self.paymentManager.createDevpayIntent(config: self.config,
+                                               details: details,
+                                               restClient: restClientDevPay()) { succes, err in
             if err != nil {
                 completion(nil, err)
-            } else if let key = key {
-                
-                let restClient = self.restClientPaysafe(key: key)
-                self.paysafeClient = PaysafeClient(restClient: restClient)
-                
-                self.paysafeClient.tokenize(paymentDetail: details) { paymentToken, error in
+            }else{
+                self.paymentManager.paysafeAPIKey() { key, err in
                     
-                    if let paymentToken = paymentToken {
+                    if err != nil {
+                        completion(nil, err)
+                    } else if let key = key {
                         
-                        self.confirmPayment(token: paymentToken,
-                                            details: details,
-                                            completion:completion)
+                        let restClient = self.restClientPaysafe(key: key)
+                        self.paysafeClient = PaysafeClient(restClient: restClient)
                         
-                    }else {
+                        self.paysafeClient.tokenize(paymentDetail: details) { paymentToken, error in
+                            
+                            if let paymentToken = paymentToken {
+                                
+                                self.confirmPayment(token: paymentToken,
+                                                    details: details,
+                                                    completion:completion)
+                                
+                            }else {
+                                let error = NSError(domain:"DevPaySDK", code:0, userInfo:nil)
+                                completion(nil, error)
+                            }
+                        }
+                    }else{
                         let error = NSError(domain:"DevPaySDK", code:0, userInfo:nil)
                         completion(nil, error)
                     }
                 }
-            }else{
-                let error = NSError(domain:"DevPaySDK", code:0, userInfo:nil)
-                completion(nil, error)
+
             }
         }
     }
@@ -65,6 +74,17 @@ public class DevpayClient {
     }
     
     private func restClientDevPay() -> RestClient {
+        let headers = ["Content-Type":"application/json"]
+
+        let baseURL = "https://api.devpay.io"
+        let restClient = RestClient(baseURL: baseURL,
+                                    headers: headers)
+        restClient.debug = self.config.debug
+        return restClient
+    }
+
+    
+    private func restClientTilled() -> RestClient {
         
         let headers = ["Authorization":"Bearer " + config.shareableKey,
                        "tilled-account":config.accountId,

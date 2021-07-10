@@ -17,6 +17,7 @@ class PaymentManager {
         self.restClient = restClient
     }
     
+    typealias DevPayIntentCompletionBlock = (Bool?, Error?)->()
     typealias CompletionBlock = (PaymentIntent?, Error?)->()
     typealias PaymentMethodCompletionBlock = (PaymentMethod?, Error?)->()
 
@@ -35,6 +36,61 @@ class PaymentManager {
         }
     }
     
+    public func createDevpayIntent(config: Config,
+                                   details : PaymentDetail,
+                               restClient : RestClient,
+                               completion: @escaping DevPayIntentCompletionBlock) -> Void {
+
+        var payload = [String:Any]()
+        var paymentIntentsInfo = [String:Any]()
+        paymentIntentsInfo["amount"] = details.amount
+        paymentIntentsInfo["currency"] = details.currency.rawValue
+        paymentIntentsInfo["capture_method"] = "automatic"
+        paymentIntentsInfo["payment_method_types"] = ["card"]
+
+        var requestDetails = [String:Any]()
+        requestDetails["DevpayId"] = config.accountId
+        if config.sandbox {
+            requestDetails["env"] = "sandbox"
+        }
+        requestDetails["token"] = config.accessKey
+        payload["PaymentIntentsInfo"] = paymentIntentsInfo
+        payload["RequestDetails"] = requestDetails
+
+        if let jsonData = try? JSONSerialization.data(withJSONObject: payload, options: []) {
+
+            restClient.post(path: "/v1/general/paymentintent",
+                            data: jsonData) { data, err in
+                
+                if err != nil {
+                    completion(false,err)
+                }else{
+                    
+                    if let data = data {
+                    
+                        if let reponseDict = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]{
+                            
+                            if let response = reponseDict[ "Response"] as? [String:Any] {
+                                
+                                if response["status"] as? Int == 1 {
+                                    completion(true,nil)
+                                    return
+                                }
+
+                            }
+                        }
+                    }
+                    let error = self.errorWithMSG(msg: "Failed to create the dev-pay payment intent", metaData: data)
+                    completion(false,error)
+
+                }
+                
+            }
+
+        }
+        
+    }
+
     private func createMethod(paymentToken : String,
                               details : PaymentDetail,
                         completion: @escaping PaymentMethodCompletionBlock) -> Void {
@@ -46,7 +102,7 @@ class PaymentManager {
         
         var billingDetailsDict = [String:Any]()
         billingDetailsDict["amount"] = details.amount
-        billingDetailsDict["currency"] = details.currency
+        billingDetailsDict["currency"] = details.currency.rawValue
         billingDetailsDict["address"] = details.billingAddress?.asDictionary()
         dataDictionary["billing_details"] = billingDetailsDict;
         
