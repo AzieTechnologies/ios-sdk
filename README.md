@@ -3,7 +3,7 @@ A iOS SDK for Devpay Payment Gateway Get your API Keys at https://devpay.io
 
 ## Integration
 ```Ruby
-  pod 'DevpaySDK',:podspec=>'https://github.com/dev-pay/ios-sdk/releases/download/v1.0.0/DevpaySDK.podspec'
+  pod 'DevpaySDK',:podspec=>'https://github.com/dev-pay/ios-sdk/releases/download/1.0.0/DevpaySDK.podspec'
 ```
 
 ## Make payment
